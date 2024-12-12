@@ -13,6 +13,8 @@ if not os.path.exists(input_file_path):
 df = pd.read_csv(input_file_path)
 data = df['text'].str.cat(sep='\n')
 
+print(f"preview: {data[:100]}")
+
 total, _ = df.shape
 
 n = len(data)
